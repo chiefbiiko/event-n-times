@@ -1,0 +1,28 @@
+{
+  "name": "event-n-times",
+  "version": "0.0.0",
+  "description": "register an event handler with a call cap at n",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiefbiiko/event-n-times.git"
+  },
+  "keywords": [
+    "event",
+    "n",
+    "times",
+    "handler"
+  ],
+  "author": "Noah Anabiik Schwarz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiefbiiko/event-n-times/issues"
+  },
+  "homepage": "https://github.com/chiefbiiko/event-n-times#readme",
+  "devDependencies": {
+    "tape": "^4.9.0"
+  }
+}
