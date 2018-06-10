@@ -6,7 +6,6 @@ function ntimes (event, n, handler) {
 }
 
 function nify (emitter) {
-  if (!emitter.on) throw new TypeError('emitter does not have an .on method')
   emitter._count = 0
   emitter.ntimes = ntimes
   return emitter
