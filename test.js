@@ -36,3 +36,24 @@ tape('prepending', function (t) {
   emitter.emit('data', Buffer.from([ 4, 1, 9 ]))
   t.end()
 })
+
+tape('removing', function (t) {
+  var emitter = new EventEmitter()
+  emitter = nify(emitter)
+
+  function noop () {}
+
+  function ondata (chunk) {
+    t.ok(chunk.length, 'got sth')
+  }
+
+  emitter.ntimes('data', Infinity, noop)
+  emitter.prependNtimeListener('data', 2, ondata)
+  emitter.emit('data', Buffer.from([ 4, 1, 9 ]))
+
+  t.is(emitter.listeners('data').length, 2, 'got two')
+  emitter.removeNtimeListener('data', ondata)
+  t.is(emitter.listeners('data').length, 1, 'got one')
+
+  t.end()
+})
