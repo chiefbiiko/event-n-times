@@ -39,13 +39,13 @@ for (var i = 0; i < 7; i++) passthru.write(Buffer.from('fraud'))
 
 Add a `.ntimes` instance method on the `emitter`.
 
-### `emitter.ntimes(eventName, n, handler)`
+### `emitter.ntimes(eventName, n, listener)`
 
 Register an event handler that will be called at most `n` times.
 
-Alias: `emitter.addNtimeListener(eventName, n, handler)`
+Alias: `emitter.addNtimeListener(eventName, n, listener)`
 
-### `emitter.prependNtimeListener(eventName, n, handler)`
+### `emitter.prependNtimeListener(eventName, n, listener)`
 
 Register a n-time handler via `emitter.prependListener`.
 

@@ -1,8 +1,9 @@
 {
   "name": "event-n-times",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "register an event handler with a call cap at n",
   "main": "index.js",
+  "unpkg": "bundle.js",
   "scripts": {
     "test": "tape test.js"
   },
